@@ -1,0 +1,12 @@
+h1, .fpost .entry-title {
+  font-family:Verdana;
+  font-size:33.6px;
+  color: red;
+}
+body {
+    background: #b7e5ff;
+    font-size: 20px;
+    color: black;
+    padding: 20px;
+    border: 6px solid white;
+}

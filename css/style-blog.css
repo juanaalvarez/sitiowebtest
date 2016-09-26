@@ -4,6 +4,7 @@ h1, .fpost .entry-title {
   color: red;
 }
 body {
+    font-family:Verdana;
     background: #b7e5ff;
     font-size: 20px;
     color: black;

@@ -2,14 +2,112 @@
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="">
-    <link rel="shorcut icon" type="image/x-icon" class="img" href="../imagenes/favicon.ico">
-    <title>Formulario Basico con html y css</title>
+   
+    <title>Routers y redes</title>
 </head>
-
+<center>
+        <h1>Routers y redes</h1>
+</center>
 <body>
-    
-        
+  <div dir="ltr"><p><b><font color="#9fc5e8" size="3"><i>- Topología</i></font></b></p><p>La figura muestra la topología que se describe en este capítulo. La topología 
+está compuesta por tres routers, denominados R1, R2 y R3. Los routers R1 y R2 se 
+conectan a través de un enlace WAN y los routers R2 y R3 se conectan a través de 
+otro enlace WAN. Cada router está conectado a una LAN Ethernet diferente, 
+representada por un switch y una PC.</p><p>Cada router en este ejemplo es un Cisco 1841. Un router Cisco 1841 tiene las 
+siguientes interfaces:</p>
+<ul>
+<li>Dos interfaces FastEthernet: FastEthernet 0/0 y FastEthernet 0/1</li>
+<li>Dos interfaces seriales: Serial 0/0/0 y Serial 0/0/1</li></ul><div><br /></div><div><p><b><i><font color="#9fc5e8" size="3">- Conectores Ethernet</font></i></b></p><p>Pueden utilizarse dos tipos de cables con interfaces LAN Ethernet:</p>
+<ul>
+<li>Un cable patch de conexión directa con el mismo orden de pins de colores en 
+cada extremo del cable.</li>
+<li>Un cable de conexión cruzada con el pin 1 conectado al pin 3 y el pin 2 
+conectado al pin 6.</li></ul>
+<p>Los cables de conexión directa se usan para conectar:</p>
+<ul>
+<li>Un switch a un router</li>
+<li>Un switch a una PC</li>
+<li>Un hub a una PC</li>
+<li>Un hub a un servidor</li></ul>
+<p>Los cables de conexión cruzada se usan para conectar:</p>
+<ul>
+<li>Un switch a otro switch </li>
+<li>Una PC a otra PC </li>
+<li>Una switch a un hub</li>
+<li>Un hub a otro hub</li>
+<li>Un router a otro router</li>
+<li>Un router a un servidor</li></ul><p><b><i><font color="#9fc5e8" size="3"><br /></font></i></b></p><p><b><font color="#9fc5e8" size="3"><i>- Conexión física de una interfaz WAN</i></font></b></p><p>La capa física WAN describe la interfaz entre el equipo terminal de datos 
+(DTE) y el equipo de terminación de circuitos de datos (DCE). Normalmente el DCE 
+es el proveedor del servicio, mientras que el DTE es el dispositivo conectado. 
+En este modelo, los servicios brindados al DTE se ofrecen a través de un módem o 
+de una CSU/DSU.</p>
+<p>Generalmente, el router es el dispositivo DTE y está conectado a una CSU/DSU, 
+que es el dispositivo DCE. La CSU/DSU (dispositivo DCE) se usa para convertir 
+los datos del router (dispositivo DTE) en una forma aceptable para el proveedor 
+de servicio WAN. La CSU/DSU (dispositivo DCE) también es responsable de 
+convertir los datos del proveedor de servicio WAN en una forma aceptable por el 
+router (dispositivo DTE). Generalmente, el router se conecta a la CSU/DSU 
+utilizando un cable DTE serial, como se muestra. </p><p>Las interfaces seriales necesitan una señal de temporización para 
+controlar los tiempos de la comunicación. En la mayoría de los entornos, el 
+proveedor de servicio (un dispositivo DCE, como por ejemplo una CSU/DSU) 
+proporcionará la temporización. De manera predeterminada, los routers Cisco son 
+dispositivos DTE. Sin embargo, en un entorno de laboratorio, no utilizamos 
+ninguna CSU/DSU y evidentemente no tenemos un proveedor de servicio WAN. 
+</p><p><b><br /></b></p><p><b><i><font color="#9fc5e8" size="3">- Configuración de enlaces seriales en un entorno de laboratorio</font></i></b></p><br />
+<p>En los enlaces seriales interconectados directamente, como en un entorno de 
+laboratorio, un extremo de una conexión se debe considerar como DCE y debe 
+proporcionar la señal de temporización. Si bien las interfaces seriales Cisco 
+son dispositivos DTE predeterminados, pueden configurarse como dispositivos 
+DCE.</p>
+<p>Para configurar un router para que actúe como dispositivo DCE:</p><p>1. Conecte el extremo DCE del cable a la interfaz serial.</p><p>2. Configure la señal de temporización de la interfaz serial usando el 
+comando <span><b>clock rate</b></span>.</p><p>Los cables seriales que se utilizan en el laboratorio son generalmente uno de 
+estos dos tipos: </p>
+<ul>
+<li>Un cable de conexión cruzada DTE/DCE, en el que un extremo es DTE y el otro 
+extremo es DCE.</li>
+<li>Un cable DTE conectado a un cable DCE.</li></ul><div><br /></div><br /><p><br /></p></div><div><br /></div><div style="text-align:right"><a href="http://curriculum.netacad.net/" style="background-color:rgb(80,102,102);line-height:20px" rel="nofollow"><font color="#ffff00" size="1"></font></a>
+</div></div></td></tr></tbody></table>
+</div>   
+     <img src="../images/imagen-router.jpg" height="55%" width="55%"></center> 
+   <h1>Red para invitados</h1>
 </body>
 
-</html>
+</html><p>Los routers actuales potencian mucho las conexiones inalámbricas con cosas como el uso de múltiples antenas, nuevos protocolos para aumentar la transferencia y mejoras a nivel de software entre otras. El problema es que luego, esas funciones de software son las menos aprovechadas.</p>
+
+<p>Una de las que más desapercibida pasa es la <strong>opción de crear una red para invitados</strong>. Ésta puede ser inalámbrica o, en algunos casos, a través de la conexión ethernet mediante el uso de un puerto específico. ¿Por qué resulta interesante? Lo vemos.<!--more--></p>
+
+<h2>Red para invitados, una cuestión de seguridad</h2>
+
+<div class="article-asset-image article-asset-normal"><div class="asset-content"> <img class="sf-lazy centro_sinmarco" sf-srcset="http://i.blogs.es/b0d7ce/fritz-box-1/450_1000.jpg 450w, http://i.blogs.es/b0d7ce/fritz-box-1/650_1200.jpg 681w, http://i.blogs.es/b0d7ce/fritz-box-1/1024_2000.jpg 1024w, http://i.blogs.es/b0d7ce/fritz-box-1/1366_2000.jpg 1366w" sf-src="http://i.blogs.es/b0d7ce/fritz-box-1/450_1000.jpg" alt="Fritz Box 1"><noscript><img alt="Fritz Box 1" src="http://i.blogs.es/b0d7ce/fritz-box-1/450_1000.jpg"></noscript> </div></div>
+
+<p>«¿Cuál es la contraseña de tu wifi?» Creo que todos hemos recibido en algún momento esta pregunta. Puede ser algún familiar o simplemente un amigo el que llega a casa, ve que hay varias redes wifi y tras saber cuál es la nuestra nos pide la contraseña. Nosotros, educadamente, se la damos.</p>
+
+<p>Eso que hacemos tantas veces <strong>puede suponer un riesgo para nuestra seguridad o intimidad</strong>. Cuando cualquier usuario se conecta a nuestra red local la posibilidad de que pueda acceder a contenido compartido y, en el peor de los casos, infectar o afectar a nuestros equipos mediante la propagación de algún tipo de virus o malware está ahí. Vale, la última es más dramática.</p>
+
+<div class="article-asset-image article-asset-normal"><div class="asset-content"> <img class="sf-lazy centro_sinmarco" sf-srcset="http://i.blogs.es/d5d057/fritz-box/450_1000.jpg 450w, http://i.blogs.es/d5d057/fritz-box/650_1200.jpg 681w, http://i.blogs.es/d5d057/fritz-box/1024_2000.jpg 1024w, http://i.blogs.es/d5d057/fritz-box/1366_2000.jpg 1366w" sf-src="http://i.blogs.es/d5d057/fritz-box/450_1000.jpg" alt="Fritz Box"><noscript><img alt="Fritz Box" src="http://i.blogs.es/d5d057/fritz-box/450_1000.jpg"></noscript> </div></div>
+
+<p>La solución a esas situaciones es usar la opción de crear una red para invitados en nuestro router. De forma sencilla creamos una red inalámbrica o reservamos un puerto ethernet para que se puedan conectar sin riesgo para nosotros. ¿Cómo que sin riesgo? Pues fácil, al ser una red independiente los ordenadores no se ven, es decir, su ordenador y el o los nuestros no comparten nada al no estar en la misma red.</p>
+
+<p>Puede parecer algo poco interesante pero no es así. Y no, no es para ocultar ese contenido que piensas, basta que sea contenido importante del trabajo, facturas u otros datos sensibles. Tampoco hay que olvidar que como red independiente tendrá sus propias opciones de seguridad y contraseña. Esto facilita establece una contraseña más fácil de recordar, pudiendo usar la más segura para la nuestra.</p>
+
+<p>Sea como sea, lo importante es que si soléis dar acceso a vuestro invitados a la red wifi de casa sepáis que existen opciones más cómodas. Eso sí, tendréis que ver si vuestro router permite o no tal opción.</p>
+
+
+ <img src="../images/router-seguridad.png" height="55%" width="55%"></center> 
+
+<h1>Switches de red</h1>
+
+<p>A medida que su empresa crece, los innovadores <a href="http://www.cisco.com/web/ES/solutions/es/network_switches/index.html?COUNTRY_SITE=es&CAMPAIGN=seobacklinking&CREATIVE=backlink&POSITION=link&REFERRING_SITE=ciscoes" title="Switches de red">switches de red</a> pueden proteger su inversi&oacute;n y ayudarle a prepararse para el futuro.</p>
+		<p>Los <a href="http://www.cisco.com/web/ES/solutions/es/network_switches/index.html?COUNTRY_SITE=es&CAMPAIGN=seobacklinking&CREATIVE=backlink&POSITION=link&REFERRING_SITE=ciscoes" title="Switches de red">switches de red</a> son el n&uacute;cleo de todas las redes. Proporcionan conectividad de alta velocidad a las aplicaciones y los sistemas de comunicaciones, y transmiten de forma eficaz y segura sus aplicaciones de datos, voz, v&iacute;deo y tecnolog&iacute;a inal&aacute;mbrica que hacen un uso intensivo del ancho de banda. Las redes de &aacute;rea local (LAN) dependen de los <a href="http://www.cisco.com/web/ES/solutions/es/network_switches/index.html?COUNTRY_SITE=es&CAMPAIGN=seobacklinking&CREATIVE=backlink&POSITION=link&REFERRING_SITE=ciscoes" title="Switches de red">switches de red</a> para gestionar los patrones de tr&aacute;fico, admitir nuevos servicios y optimizar el rendimiento de las aplicaciones.</p>
+		<p>Para satisfacer los requisitos actuales y futuros de la red, los <a href="http://www.cisco.com/web/ES/solutions/es/network_switches/index.html?COUNTRY_SITE=es&CAMPAIGN=seobacklinking&CREATIVE=backlink&POSITION=link&REFERRING_SITE=ciscoes" title="Switches de red">switches de red</a> deben ofrecer la siguiente funcionalidad:</p>
+		<ul class="bulleted">
+			<li><strong>Inteligencia de aplicaciones:</strong> Los <a href="http://www.cisco.com/web/ES/solutions/es/network_switches/index.html?COUNTRY_SITE=es&CAMPAIGN=seobacklinking&CREATIVE=backlink&POSITION=link&REFERRING_SITE=ciscoes" title="Switches de red">switches de red</a> de hoy deben reconocer numerosos tipos de aplicaciones. Adem&aacute;s deben poder ayudar a proteger y a establecer prioridades para las aplicaciones que se ejecutan en la red, a fin de proporcionar la mejor experiencia para el usuario.</li>
+			<li><strong>Servicios de redes unificadas:</strong> Los <a href="http://www.cisco.com/web/ES/solutions/es/network_switches/index.html?COUNTRY_SITE=es&CAMPAIGN=seobacklinking&CREATIVE=backlink&POSITION=link&REFERRING_SITE=ciscoes" title="Switches de red">switches de red</a> pueden aplicar ahora seguridad, escalabilidad y servicios de manera uniforme en toda la red. Los <a href="http://www.cisco.com/web/ES/solutions/es/network_switches/index.html?COUNTRY_SITE=es&CAMPAIGN=seobacklinking&CREATIVE=backlink&POSITION=link&REFERRING_SITE=ciscoes" title="Switches de red">switches de red</a> combinan los mejores elementos de las redes inal&aacute;mbricas y fijas para conectar cualquier recurso o persona y a trav&eacute;s de cualquier dispositivo. </li>
+			<li><strong>Comunicaciones sin interrupciones:</strong> Los <a href="http://www.cisco.com/web/ES/solutions/es/network_switches/index.html?COUNTRY_SITE=es&CAMPAIGN=seobacklinking&CREATIVE=backlink&POSITION=link&REFERRING_SITE=ciscoes" title="Switches de red">switches de red</a> pueden prevenir las interrupciones en las comunicaciones a trav&eacute;s de funciones y capacidades existentes como por ejemplo hardware redundante, reenv&iacute;o ininterrumpido, actualizaciones de software en servicio (ISSU) y modularidad de software. </li>
+			<li><strong>Virtualizaci&oacute;n:</strong> Al admitir la utilizaci&oacute;n de recursos y servicios din&aacute;micos a trav&eacute;s de una infraestructura compartida, los <a href="http://www.cisco.com/web/ES/solutions/es/network_switches/index.html?COUNTRY_SITE=es&CAMPAIGN=seobacklinking&CREATIVE=backlink&POSITION=link&REFERRING_SITE=ciscoes" title="Switches de red">switches de red</a> permiten a las empresas adoptar nuevos servicios en una red com&uacute;n virtualizada. Esto ayuda a habilitar un acceso muy seguro a los recursos de la red para usuarios temporales y contratistas, y posibilita una separaci&oacute;n de departamentos que facilita la conformidad empresarial.</li>
+			<li><strong>Seguridad integrada:</strong> Los <a href="http://www.cisco.com/web/ES/solutions/es/network_switches/index.html?COUNTRY_SITE=es&CAMPAIGN=seobacklinking&CREATIVE=backlink&POSITION=link&REFERRING_SITE=ciscoes" title="Switches de red">switches de red</a> son la primera l&iacute;nea de defensa contra los ataques internos a la seguridad. Tambi&eacute;n impiden a los usuarios no autorizados acceder a la red. Los servicios de seguridad suministrados por los <a href="http://www.cisco.com/web/ES/solutions/es/network_switches/index.html?COUNTRY_SITE=es&CAMPAIGN=seobacklinking&CREATIVE=backlink&POSITION=link&REFERRING_SITE=ciscoes" title="Switches de red">switches de red</a> incluyen Control de admisi&oacute;n a la red y m&oacute;dulos de servicios de seguridad integrada que ayudan a habilitar redes privadas virtuales, firewalls, prevenci&oacute;n de intrusiones, detecci&oacute;n de intrusiones y otros servicios de seguridad.</li>
+			<li><strong>Facilidad de administraci&oacute;n operativa:</strong> El personal de TI necesita la capacidad de configurar y supervisar a distancia los dispositivos de red desde una ubicaci&oacute;n central. Adem&aacute;s necesitan poder automatizar las respuestas mediante gesti&oacute;n de eventos incorporada, y utilizar herramientas de gesti&oacute;n de diagn&oacute;stico en tiempo real para solucionar problemas en la red LAN y aplicar cambios.</li>
+		</ul>
+
+
+		
